@@ -1,0 +1,49 @@
+def calculator():
+    print("Easy Calculator")
+    math_type = input("What type of math are you lookin to do? 1) Addition, 2) Subtraction, 3) Multiplication, 4) Division? Please enter 1, 2, 3, or 4?: ")
+
+    num1 = input("Please enter your first number: ")
+    num2 = input("Please input your second number: ")
+    num1 = float(num1)
+    num2 = float(num2)
+
+    def addition_math():
+        answer = num1 + num2
+        print(answer)
+
+    def subtraction_math():
+        answer = num1 - num2
+        print(answer)
+
+    def multiplication_math():
+        answer = num1 * num2
+        print(answer)
+
+    def division_math():
+        answer = num1 / num2
+        print(answer)
+
+    def do_math():
+        if(math_type == "1"):
+            addition_math()
+        elif(math_type == "2"):
+            subtraction_math()
+        elif(math_type == "3"):
+            multiplication_math()
+        elif(math_type == "4"):
+            division_math()
+        else:
+            print("Invalid Selection")
+            calculator()
+    do_math()
+    def loop():
+        var3 = input("would you like to do more math. Y or N: ")
+        if var3 == "Y" or "y":
+            calculator()
+        elif var3 == "N" or "n":
+            print("Have a nice day")
+        else:
+            print("invalid answer")
+            loop()
+    loop()
+calculator()
